@@ -14,10 +14,10 @@ This is the list you can input values like below:
 <simple-piano-keyboard v-model="selectedNotes" lowestNote="C3" highestNote="C4"></simple-piano-keyboard>
 ```
 
-(Now on write description)
+(Now on write description... Prease wait full version.)
 | Property | Type | Description | Default value |
 | :------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------ |
-| v-model | String[]<br/> or <br/>Number[] | Array of note number or international styled note name like `C4`.<br/>The central C on piano is 'C4'. And its one octave higher is 'C5'. Note number of 'C4' is 60. Notes of black key can be express like 'A#2' using #. <br/>The value of this property is interlockly changed with keyboard's selection state. | `[]` |
+| v-model | String[]<br/> or <br/>Number[] | Array of note number or international styled note name like 'C4'.<br/>The central C on piano is 'C4'. And its one octave higher is 'C5'. Note number of 'C4' is 60. Notes of black key can be express like 'A#2' using #. <br/>The value of this property is interlockly changed with keyboard's selection state. | `[]` |
 |lowestNote|String<br/> or <br/>Number|The lowest note of a keyboard.|`'A0'`<br/>(The lowest note of the piano with 88 keys)|
 |highestNote|String<br/> or <br/>Number|The highest note of a keyboard.|`'C8'`<br/>(The highest note of the piano with 88 keys)|
 |keyHeightSize|Number||`10`|
@@ -26,7 +26,7 @@ This is the list you can input values like below:
 |width|Number||`380`|
 |color|Object||`{whiteKey: '#FFFFFF', blackKey: '#222222', selectedWhiteKey: '#B2EBF2', selectedBlackKey: '#B2EBF2', keyBorder: '#212121', frameBorder: '#e0e0e0', noteName: '#212121'}`|
 |thickness|Object||`{keyBorder: 1, frameBorder: 2}`|
-|noteNameDisplay|Object|The settings of display note names on each key. `type` can be set `'none'`, `'intl'` or `'num'`.`target` can be set note alphabets not included # like `'A'`, `'C'`.|`{type: 'none', target: 'A'}`|
+|noteNameDisplay|Object|The settings of display note names on each key. `type` can be set `'none'`, `'intl'` or `'num'`. <br/>`target` can be set note alphabets not included # like `'A'`, `'C'`.|`{type: 'none', target: 'A'}`|
 |noteOutputType|String|`'intl'`: International styled note name<br/>`'num'`: Note number|`'intl'`|
 |isReadOnly|Boolean||`false`|
 
