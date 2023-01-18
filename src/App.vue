@@ -3,7 +3,8 @@
     v-model="selectedNotes"
     :keyHeightSize="10"
     :keyWidthSize="10"
-    :noteNameDisplay="{ target: 'C' }"
+    :padding="0"
+    :noteNameDisplay="{ type: 'intl', target: 'C' }"
   />
   {{ selectedNotes }}
   <div @click="selectedNotes = []">clear</div>

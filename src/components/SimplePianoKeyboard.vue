@@ -8,7 +8,7 @@
         @click="changeSelectionOfKey(key)"
         class="one-key"
       >
-        <div class="note-name-spacer"></div>
+        <div :style="`height: ${spacerHeight}px`"></div>
         <div class="note-name">
           {{ getNoteName(key) }}
         </div>
@@ -39,18 +39,18 @@ const noteDic = {
 const defaultColor = {
   whiteKey: '#FFFFFF',
   blackKey: '#222222',
-  selectedWhiteKey: '#4FC3F7',
-  selectedBlackKey: '#4FC3F7',
-  keyBorder: '#000000',
+  selectedWhiteKey: '#B2EBF2',
+  selectedBlackKey: '#B2EBF2',
+  keyBorder: '#212121',
   frameBorder: '#e0e0e0',
-  noteName: '#000000',
+  noteName: '#212121',
 };
 const defaultThickness = {
   keyBorder: 1,
   frameBorder: 2,
 };
 const defaultNoteNameDisplay = {
-  type: 'intl', // none(default), intl, num
+  type: 'none', // none(default), intl, num
   target: 'A', // A(default), B(# is not allowed), ... or all
 };
 
@@ -142,6 +142,7 @@ export default {
         width: whiteKeySize.value.width * 0.7,
       };
     });
+    const spacerHeight = computed(() => whiteKeySize.value.height * 0.76);
 
     // propとして与えられていない値をデフォルト値で補ったもの
     const colorSetting = computed(() =>
@@ -262,6 +263,7 @@ export default {
       const { left, isBlackKey, selected } = key;
       const { blackKey, whiteKey, keyBorder } = colorSetting.value;
 
+      // 黒鍵か白鍵かによって用いる値を変える
       const keySize = isBlackKey ? blackKeySize.value : whiteKeySize.value;
       const keyColor = isBlackKey ? blackKey : whiteKey;
       const selectedKeyColor = isBlackKey
@@ -297,12 +299,15 @@ export default {
       const { frameBorder } = thicknessSetting.value;
       return `width: ${width.value - frameBorder}px; padding: ${
         padding.value
-      }px; border: solid ${frameBorder}px ${frameBorder}; font-size: ${
-        keyHeightSize.value * 1.4
-      }px; color: ${colorSetting.value.noteName};`;
+      }px; border: solid ${frameBorder}px ${
+        colorSetting.value.frameBorder
+      }; font-size: ${keyHeightSize.value * 1.4}px; color: ${
+        colorSetting.value.noteName
+      };`;
     });
 
     return {
+      spacerHeight,
       keys,
       getNoteName,
       changeSelectionOfKey,
@@ -397,9 +402,6 @@ function getNoteNameFromNoteNum(noteNum) {
   position: relative;
   border-radius: 8px;
   overflow: scroll;
-}
-.note-name-spacer {
-  height: 76%;
 }
 .note-name {
   text-align: center;
