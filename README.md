@@ -2,9 +2,7 @@
 
 ## What is this?
 
-`simple-piano-keyboard` is literally "simple piano keyboard" component of Vue.js🤣
-This package doesn't include mechanism of sound for now. But if you have sound sources and combine with, it's possible to create musical instrument, I think.
-This is very simple component but that's reason it have infinity possibility🤩
+`simple-piano-keyboard` is literally "simple piano keyboard" component of Vue.js🤣<br/>This package doesn't include mechanism of sound for now. But if you have sound sources and combine with, it's possible to create musical instrument, I think.<br/>This is very simple component but that's reason it have infinity possibility🤩
 
 ## Property list
 
