@@ -14,7 +14,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, './src/lib-main.js'),
+      entry: resolve(__dirname, './src/library-main.js'),
       name: 'SimplePianoKeyboard',
       fileName: (format) => `simple-piano-keyboard.${format}.js`,
       formats: ['es', 'umd', 'cjs'],

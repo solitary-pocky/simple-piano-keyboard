@@ -26,7 +26,7 @@ This is the list you can input values like below:
 |thickness|Object|Define thickness of some borders.|`{keyBorder: 1, frameBorder: 2}`|
 |noteNameDisplay|Object|The settings of display note names on each key. `type` can be set `'none'`, `'intl'` or `'num'`. <br/>`target` can be set note alphabets not included # like `'A'`, `'C'`.|`{type: 'none', target: 'A'}`|
 |noteOutputType|String|`'intl'`: International styled note name<br/>`'num'`: Note number|`'intl'`|
-|isReadOnly|Boolean||`false`|
+|isReadOnly|Boolean|If you set `true`, clicking keys is be disabled.|`false`|
 
 ## Project setup
 

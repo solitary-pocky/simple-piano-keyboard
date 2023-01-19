@@ -1,6 +1,6 @@
 {
   "name": "simple-piano-keyboard",
-  "version": "0.1.17",
+  "version": "1.0.0",
   "description": "Can display simple piano keyboard. (Note: No include sound)",
   "private": false,
   "main": "./dist/simple-piano-keyboard.es.js",
