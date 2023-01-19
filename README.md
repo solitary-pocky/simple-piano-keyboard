@@ -2,7 +2,7 @@
 
 ## What is this?
 
-`simple-piano-keyboard` is literally "simple piano keyboard" component of Vue.js🤣<br/>This package doesn't include mechanism of sound for now. But if you have sound sources and combine with, it's possible to create musical instrument, I think.<br/>This is very simple component but that's reason it have infinity possibility🤩
+`simple-piano-keyboard` is literally "simple piano keyboard" component of Vue.js🤣<br/>This package doesn't include mechanism of sound for now. But if you have sound sources and combine with, it's possible to create musical instrument, I think.<br/>This is very simple component but that's reason it has infinity possibility🤩
 
 ## Property list
 
@@ -15,7 +15,7 @@ This is the list you can input values like below:
 (Now on write description... Prease wait full version.)
 | Property | Type | Description | Default value |
 | :------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------ |
-| v-model | String[]<br/> or <br/>Number[] | Array of note number or international styled note name like 'C4'.<br/>The central C on piano is 'C4'. And its one octave higher is 'C5'. Note number of 'C4' is 60. Notes of black key can be express like 'A#2' using #. <br/>The value of this property is interlockly changed with keyboard's selection state. | `[]` |
+| v-model | String[]<br/> or <br/>Number[] | Array of MIDI note number or international styled note name like 'C4'.<br/>For example, the central C on piano is 'C4'. And its one octave higher is 'C5'. MIDI note number of 'C4' is 60. Notes of black key can be expressed like 'A#2' by using #. <br/>The value of this property is interlockly changed with keyboard's selection state. | `[]` |
 |lowestNote|String<br/> or <br/>Number|The lowest note of a keyboard.|`'A0'`<br/>(The lowest note of the piano with 88 keys)|
 |highestNote|String<br/> or <br/>Number|The highest note of a keyboard.|`'C8'`<br/>(The highest note of the piano with 88 keys)|
 |keyHeightSize|Number||`10`|
@@ -63,7 +63,6 @@ const vueContent = {
 };
 
 const app = createApp(vueContent);
-app.use(vuetify);
 app.use(window['simple-piano-keyboard']);
 app.mount('#app');
 ```
