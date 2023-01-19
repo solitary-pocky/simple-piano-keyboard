@@ -32,9 +32,8 @@ This is the list you can input values like below:
 
 ### Use npm
 
-```
-npm i simple-piano-keyboard
-```
+Sorry... Now this component is only working in case of using cdn.<br/>
+I can't why, but I really want to solve it and be struging now!
 
 ### Use CDN
 
