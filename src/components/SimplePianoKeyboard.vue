@@ -200,7 +200,7 @@ export default {
           left,
           isBlackKey: isBlackKey(noteNum),
           selected: selectedNoteNums.value.includes(noteNum) ? true : false,
-          num: lowestNoteNum.value,
+          num: noteNum,
           intl: convertToIntlStyle(noteNum),
           char: getNoteNameFromNoteNum(noteNum),
         });
@@ -388,23 +388,26 @@ function getNoteNameFromNoteNum(noteNum) {
 [v-cloak] {
   display: none;
 }
-.one-key {
-  display: inline-block;
-  position: absolute;
-  cursor: pointer;
-  overflow: hidden;
-}
-.keys-wrapper {
-  position: relative;
-  background-color: #e0e0e0;
-}
 .keyboard-wrapper {
   position: relative;
   border-radius: 8px;
   overflow: scroll;
-}
-.note-name {
-  text-align: center;
-  font: Meiryo, sans-serif;
+
+  .keys-wrapper {
+    position: relative;
+    background-color: #e0e0e0;
+
+    .one-key {
+      display: inline-block;
+      position: absolute;
+      cursor: pointer;
+      overflow: hidden;
+
+      .note-name {
+        text-align: center;
+        font: Meiryo, sans-serif;
+      }
+    }
+  }
 }
 </style>

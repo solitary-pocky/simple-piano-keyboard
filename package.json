@@ -1,11 +1,18 @@
 {
   "name": "simple-piano-keyboard",
-  "version": "0.1.11",
+  "version": "0.1.17",
   "description": "Can display simple piano keyboard. (Note: No include sound)",
   "private": false,
-  "main": "dist/simple-piano-keyboard.common.js",
-  "unpkg": "./dist/simple-piano-keyboard.umd.min.js",
-  "jsdelivr": "./dist/simple-piano-keyboard.umd.min.js",
+  "main": "./dist/simple-piano-keyboard.es.js",
+  "unpkg": "./dist/simple-piano-keyboard.umd.js",
+  "jsdelivr": "./dist/simple-piano-keyboard.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/simple-piano-keyboard.es.js",
+      "require": "./dist/simple-piano-keyboard.umd.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/solitary-pocky/simple-piano-keyboard"
@@ -30,10 +37,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-bundle": "vue-cli-service build --target lib --name simple-piano-keyboard ./src/library-main.js"
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.8.3",
